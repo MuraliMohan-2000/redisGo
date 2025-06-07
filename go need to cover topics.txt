@@ -1,0 +1,8 @@
+go topic to viewed
+channel
+Bytes
+Sync
+net package
+Context diff between contextBackground,  context.Todo
+
+last vid timing 3:02:07
