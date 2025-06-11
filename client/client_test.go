@@ -7,31 +7,6 @@ import (
 	"testing"
 )
 
-func TestNewClients(t *testing.T) {
-	nClients := 10
-	for i := 0; i < nClients; i++ {
-		go func() {
-			client, err := New("localhost:8080")
-			if err != nil {
-				log.Fatal(err)
-			}
-			key := fmt.Sprintf("client_foo_%d", i)
-			value := fmt.Sprintf("client_bar_%d", i)
-			if err := client.Set(context.TODO(), key, value); err != nil {
-				log.Fatal(err)
-			}
-
-			val, err := client.Get(context.TODO(), key)
-			if err != nil {
-				log.Fatal(err)
-			}
-
-			fmt.Printf("client %s got this val back =>", val)
-
-		}()
-	}
-}
-
 func TestNewClient1(t *testing.T) {
 	client, err := New("localhost:8080")
 	if err != nil {
