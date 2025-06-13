@@ -5,4 +5,4 @@ Sync
 net package
 Context diff between contextBackground,  context.Todo
 
-last vid timing 3:02:07
+last vid timing 3:54:59
